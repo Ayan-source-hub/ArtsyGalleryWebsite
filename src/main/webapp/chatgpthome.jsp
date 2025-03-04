@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- // 3. Success Page (jsp/success.jsp) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+</head>
+<body>
+    <h2>Login Successful</h2>
+    <p>Welcome to the dashboard!</p>
+</body>
+</html>

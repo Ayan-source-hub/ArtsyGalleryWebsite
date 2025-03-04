@@ -1,0 +1,156 @@
+body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         overflow: hidden;
+         /* background-color: #fff; */
+     }
+     #background-video {
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     min-width: 100%;
+     min-height: 100%;
+     z-index: -1;
+     }
+     .navbar {
+         background: linear-gradient(to right, #ff5f6d, #ffc371);
+         /* padding: 10px; */
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 8px 30px;
+         color: rgb(11, 1, 1);
+         border-radius: 40px; /* Curved corners */
+         margin: 20px auto; /* Centering the navbar */
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+         max-width: 1080px; /* Optional: Limit the width */
+         height: 60px;
+     }
+     .navbar img {
+         width: 50px;
+         height: 50px;
+     }
+     .navbar a {
+         text-decoration: none;
+         color: rgb(7, 0, 0);
+         font-size: 20px;
+         padding: 5px 10px;
+         margin: 0 0px;
+         border-radius: 10px; /* Curved link background */
+         transition: background-color 0.3s, color 0.3s;
+     }
+     .navbar a:hover {
+     background-color: #FFB6C1; /* Lighter pink on hover */
+     color: #333; /* Dark text color on hover*/
+     }
+     .navbar .dropdown {
+         position: relative;
+         display: inline-block;
+     }
+     .navbar .dropdown-content {
+         display: none;
+         justify-content: center;
+         position:absolute;
+         /* background-color: #f9f9f9; */
+         background: linear-gradient(to right, #ff5f6d, #ffc371);
+         border-radius: 20px;
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+     }
+     .navbar .dropdown-content a {
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+     }
+     /* .navbar .dropdown-content a:hover {
+     /* background-color: #f1f1f1;     
+     } */
+     .navbar .dropdown:hover .dropdown-content {
+         display: block;
+     }
+     .navbar .icons {
+         display: flex;
+         align-items: center;
+     }
+     .navbar .icons i {
+         margin: 0 10px;
+         font-size: 24px;
+     }
+     .main-content {
+         text-align: center;
+         padding: 20px;
+         height: 20%;
+         /* display: flex;
+         justify-content: left; */
+     }
+     .main-content h1 {
+         font-size: 72px;
+         margin: 0;
+         color: #f1f1f1;
+     }
+     .main-content h2 {
+         font-size: 72px;
+         margin: 0;
+         background: linear-gradient(to right, #ff5f6d, #ffc371);
+         background-clip: text;
+         color: transparent;
+     }
+     .main-content .icons {
+         display: flex;
+         justify-content: center;
+         margin: 20px 0;
+     }
+     .main-content .icons i {
+         font-size: 48px;
+         margin: 0 10px;
+         color: #f1f1f1;
+     }
+     .main-content .shop-now {
+         background-color: #ff5f6d;
+         color: white;
+         padding: 10px 20px;
+         border-radius: 20px;
+         text-decoration: none;
+         font-size: 24px;
+         display: inline-block;
+         margin: 20px 10px;
+     }
+     .main-content .learn-more {
+         color: rgb(248, 243, 243);
+         text-decoration: none;
+         font-size: 18px;
+     }
+     .main-content .image-container {
+         display: flex;
+         justify-content: center;
+         margin: 20px 0;
+     }
+     .main-content .image-container img {
+         border-radius: 20px;
+         margin: 0 10px;
+     }
+     .main-content .large-box {
+         background-color: #d46b6b;
+         border-radius: 20px;
+         width: 60%;
+         height: 300px;
+         margin: 20px auto;
+         position: relative;
+     }
+     .main-content .large-box .question {
+         position: absolute;
+         bottom: 10px;
+         left: 10px;
+         background-color: white;
+         border-radius: 20px;
+         padding: 10px;
+         display: flex;
+         align-items: center;
+     }
+     .main-content .large-box .question i {
+         margin-right: 10px;
+     }

@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Form with Animation</title>
+  <link rel="stylesheet" href="css/upload.css">
+ 
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left Container for Animated Images -->
+    <div class="left-container">
+     
+      <img id="animated-image" src="images/paint stand.png" alt="Animated Image">
+      
+      </div>
+    <!-- Right Container for Form -->
+    <div class="right-container">
+      <h2>Product Details</h2>
+      <form id="product-form" action="product" method="get" enctype="multipart/form-data">
+      
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="name" required>
+
+        <label for="product-height">Height:</label>
+        <input type="number" id="product-height" name="height" required>
+
+        <label for="product-width">Width:</label>
+        <input type="number" id="product-width" name="width" required>
+
+        <label for="product-description">Description:</label>
+        <input type="product-description" name="description" not required>
+
+        <!-- <label for="product-description">Upload image</label>
+        <input type="file" id="uploadBtn" required> -->
+
+         <!--upload option-->
+        <br><br><br><br><br>
+    <div class="montainer">
+        <input type="file" id="file" accept="image/*" hidden required>
+        <div class="img-area" data-img="">
+            <i class='bx bxs-cloud-upload icon'></i>
+            <h3>Upload Image</h3>
+            <p>Image size must be less than <span>2MB</span></p>
+        </div>
+        <button class="select-image">Select Image</button>
+    </div>
+
+
+        <label for="uploadBtn"><i class="fa-solid fa-upload"></i></label>
+         <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </div>
+
+<script src="js/upload.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>water color</title>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/art.css">
+</head>
+<body>
+<section class="collection">
+  <div class="water">
+    <h1>Fine_Art</h1>
+  </div>
+  <div class="link">
+    <a href="#">See_all</a>
+  </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+    <div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Devotion"  >
+    <div class="text-content">
+        <h3>Devotion</h3>
+        <p>price:150<br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Tranquil">
+    <div class="text-content">
+        <h3>Tranquil</h3>
+        <p>price:200
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Abstract">
+    <div class="text-content">
+        <h3>Abstract</h3>
+        <p>price:300
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Blooming"  >
+    <div class="text-content">
+        <h3>Blooming</h3>
+        <p>price:400
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Vibrant"  >
+    <div class="text-content">
+        <h3>Vibrant</h3>
+        <p>price:500
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Enchanting"  >
+    <div class="text-content">
+        <h3>Enchanting</h3>
+        <p>price:450
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+    <img src="images/oil1.jpeg" alt="Marilyn Monroe">
+    <div class="text-content">
+        <h3>Marilyn Monroe</h3>
+        <p>price:350
+        <br>
+            height:15cm
+        </p>
+        <button class="btn">Read more</button>
+      
+    </div>
+</div>
+<div class="content swiper-slide">
+  <img src="images/oil1.jpeg" alt="Dainty"  >
+  <div class="text-content">
+      <h3>Dainty</h3>
+      <p>price:350
+      <br>
+          height:15cm
+      </p>
+      <button class="btn">Read more</button>
+    
+  </div>
+</div>
+<div class="content swiper-slide">
+  <img src="images/oil1.jpeg" alt="Captivating">
+  <div class="text-content">
+      <h3>Captivating</h3>
+      <p>price:350
+      <br>
+          height:15cm
+      </p>
+      <button class="btn">Read more</button>
+    
+  </div>
+</div>
+<div class="content swiper-slide">
+  <img src="images/oil1.jpeg" alt="Enchanting beauty">
+  <div class="text-content">
+      <h3>Enchanting beauty</h3>
+      <p>price:350
+      <br>
+          height:15cm
+      </p>
+      <button class="btn">Read more</button>
+    
+  </div>
+</div>
+</div>
+</div>
+</section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/art.js"></script>
+</body>
+</html>

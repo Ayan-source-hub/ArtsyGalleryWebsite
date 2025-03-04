@@ -1,0 +1,888 @@
+<%
+	if(session.getAttribute("name")==null){
+		response.sendRedirect("xample2.jsp");
+		}
+ %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Custom css file link-->
+    <link rel="stylesheet" href="css/home2.css">
+   <!--  <link rel="stylesheet" href="css/login.css"> -->
+
+</head>
+<body>
+
+    <!-- header section starts-->
+     <header class="header">
+        <div class="header-1">
+            <a href="#" class="logo"><img src="images/logo.png"/>Artsy Gallery</a>
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here...." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart">
+                    <div class="icon-cart">
+                        <span>0</span>
+                    </div>
+                </a>
+                <!-- <div class="icon-cart">
+                    <svg aria-hidden="true"  class="fas fa-shopping-cart"  fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+                <div class="cartTab">
+                    <h1>Shopping Cart</h1>
+                    <div class="listCart">
+                        
+                    </div>
+                    <div class="btn">
+                        <button class="close">CLOSE</button>
+                        <button class="checkOut">Check Out</button>
+                    </div>
+                </div> -->
+
+                <div id="login-btn" class="fas f-user">
+             	<p>
+             	<a class="" href="Landing_page.jsp">Logout</a>
+             	
+             	
+             	<a style="background-color:#27ae60;border-radius:50px;padding-right:10px;padding-left:10px;color:white;" href="#"><%=session.getAttribute("name") %></a>
+             	</p>
+             
+                </div> 
+            </div>
+        </div>
+
+        <div class="listProduct">
+
+        </div>
+        <div class="cartTab">
+            <div class="listCart">
+                <h1>Shopping Cart</h1>
+            </div>
+            <div class="btn" style="margin-top:550px;">
+                <button class="close">CLOSE</button>
+                <button class="checkOut">Check Out</button>
+            </div>
+        </div> 
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#featured">featured</a>
+                <a href="#arrivals">arrivals</a>
+                <a href="#reviews">reviews</a>
+                <a href="upload.jsp">Upload</a>
+            </nav>
+        </div>
+     </header>
+
+     <!--header section ends-->
+
+     <!--bottom navbar-->
+     <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-blogs"></a>
+    </nav>
+
+    <!--login form-->
+     <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>sign in</h3>
+            <span>Username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name=""class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p> Forget password ?<a href="#">click here</a></p>
+            <p>don't have an acconut ?<a href='#'>create one</a></p>
+        </form>
+    </div>  
+
+    
+    <!-- home section start -->
+    <section class="home" id="home">
+
+   <div class="row">
+    <div class="content">
+        <h3>It's not just picture<br>It's</h3>
+        <h3>
+            <div class="wrapper">
+                <!-- <div class="static-txt">I'm a</div> -->
+                <ul class="dynamic-txts">
+                  <li><span>Artsy Gallery</span></li>
+                  <li><span>Paints</span></li>
+                  <li><span>Photography</span></li>
+                  <li><span>Art</span></li>
+                  <!-- <li><span>E</span></li> -->
+                </ul>
+              </div>
+            </h3>
+        <p>A space where creativity thrives and every brushstrokes,sculpture,
+            and installation finds its perfect audience .It is a art gallery
+             management system where you can buy or sell paintings/equipments.
+             You can also get an opportunity to show your hidden talents.</p>
+        <a href="#" class="btn">Thank You!</a>
+    </div>
+
+    <div class="swiper books-slider">
+        <div class="swiper-wrapper">
+        <a href="#" class="swiper-slide"><img src="images/oil2.jpeg" alt=></a>
+        <a href="#" class="swiper-slide"><img src="images/sk1.jpeg" alt=></a>
+        <a href="#" class="swiper-slide"><img src="images/wa1.jpeg" alt=></a>
+        <a href="#" class="swiper-slide"><img src="images/sk2.jpeg" alt=></a>
+        <a href="#" class="swiper-slide"><img src="images/oil2.jpeg" alt=></a>
+        </div>
+        <img src="images/img stand.png" class="stand" alt="" style="margin-top: -300px;">
+    </div>
+   </div>
+
+</section>
+
+    <!--home section ense-->
+
+    <!-- icons section starts -->
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-plane"></i>
+            <div class="content">
+            <h3>Free Shipping</h3>
+            <p>order over $100</p>
+         </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+            <h3>Secure Payment</h3>
+            <p>100 secure payment</p>
+         </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-redo-alt"></i>
+            <div class="content">
+            <h3>Easy return</h3>
+            <p>10 days return policy</p>
+         </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+            <h3>24/7 support </h3>
+            <p>Call us Anytime</p>
+         </div>
+        </div>
+
+
+    </section>
+    <!-- icons section ends -->
+
+    
+    
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured paintings</span> </h1>
+    
+    <div class="swiper featured-slider">
+    
+    <div class="swiper-wrapper">
+    
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn addCart">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-search"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+           <a href="onepic.jsp" ><img src="images/oil1.jpeg" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>featured painting</h3>
+            <div class="price">$15.99 <span>$20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+
+</div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+</div>
+
+</section>
+
+<!--featured section ends-->
+<!--newsletter section starts-->
+
+<section class="newsletter">
+    <form action="">
+        <h3> Subscribe for latest updates</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="submit" value="subscribe" class="btn">
+    </form>
+</section>
+
+<!--newsletter section ends-->
+
+<!--arrivals section starts-->
+
+<section class="arrivals" id="arrivals">
+    
+    <h1 class="heading"> <span>new arrivals</span> </h1>
+    
+    <div class="swiper arrivals-slider">
+        
+        <div class="swiper-wrapper">
+        
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="swiper arrivals-slider">
+        
+        <div class="swiper-wrapper">
+        
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>new arrivals</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--arrivals section ends-->
+
+<!-- deal section starts -->
+
+<section class="deal">
+<div class="content">
+
+    <h3> Deal of the day</h3>
+    <h1>Upto 50% off</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+    <a href="#" class="btn">shop now</a>
+</div>
+
+<div class="image">
+    <img src="images/oil1.jpeg" alt="">
+</div>
+
+</section>
+<!-- deal section end -->
+
+<!-- reviews section start -->
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"><span>client's reviews</span></h1>
+    <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="images/oil2.jpeg" alt="">
+                <h3>John Deo</h3>
+                <p>hdbhbchdcbbckbchbckbsk</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/oil1.jpeg" alt="">
+                <h3>John Deo</h3>
+                <p>hdbhbchdcbbckbchbckbs</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+            </div>
+            <div class="swiper-slide box">
+            <img src="images/oil1.jpeg" alt="">
+            <h3>John Deo</h3>
+            <p>
+                hdbhbchdcbbckbchbckbskb</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+            </div>
+        </div>
+        <div class="swiper-slide box">
+        <img src="images/oil1.jpeg" alt="">
+        <h3>John Deo</h3>
+        <p>
+            hdbhbchdcbbckbchbckbskb</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+    </div>
+    <div class="swiper-slide box">
+                <img src="images/oil1.jpeg" alt="">
+                <h3>John Deo</h3>
+                <p>
+                    hdbhbchdcbbckbchbckbsk</p>
+                
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="images/oil1.jpeg" alt="">
+                <h3>John Deo</h3>
+                <p>
+                    hdbhbchdcbbckbchbckbskbc</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- reviews section ends -->
+
+<!-- blogs section start -->
+<!-- <section class="blogs" id="blogs">
+
+    <h1 class="heading"> <span>our blogs</span></h1>
+
+    <div class="swiper blogs-slider">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+       <h3> blogs title goes here</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+       <a href="#" class="btn">read more</a>
+</div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+       <h3> blogs title goes here</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+       <a href="#" class="btn">read more</a>
+</div>
+            </div>
+            <div class=" swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+       <h3> blogs title goes here</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+       <a href="#" class="btn">read more</a>
+</div>
+            </div>
+           <div class=" swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+       <h3> blogs title goes here</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+       <a href="#" class="btn">read more</a>
+</div>
+            </div>
+            <div class=" swiper-slide box">
+                <div class="image">
+                    <img src="images/oil1.jpeg" alt="">
+                </div>
+                <div class="content">
+       <h3> blogs title goes here</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.optio.odio</p>
+       <a href="#" class="btn">read more</a>
+</div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- blogs section ends -->
+
+<!-- footer section start -->
+<!-- <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> india</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> USA</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Russia</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> France</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Japan</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Africa</a>
+         </div> 
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"><i class="fas fa-arrow-right"></i> home</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> featured</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> arrivals</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> reviews</a>
+             <a href="#"><i class="fas fa-arrow-right"></i> blogs</a>
+         </div>
+
+     <div class="box">
+        <h3>extra links </h3>
+        <a href="#"><i class="fas fa-arrow-right"></i>account info</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>order items</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>privacy policy</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>payment method</a>
+         <a href="#"><i class="fas fa-arrow-right"></i> our serivces</a>
+    </div> 
+
+    <div class="box">
+        <h3>contact info </h3>
+        <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+        <a href="#"><i class="fas fa-phone"></i> +241-456-7890</a>
+        <a href="#"><i class="fas fa-envelope"></i>basuroysrijita@gmail.com</a>
+        <img src="worldmap.jpg" class="map" alt="">
+       </div>
+     </div>
+     <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+       </div>
+
+     <div class="credit"> created by <span>Mr.Ayan web designer</span>| all right reserved!</div>
+
+
+</section> -->
+
+
+
+
+<!-- footer section ends -->
+
+ <!--footer page-->
+
+ <footer class="footer-distributed" style="margin-top:50px;margin-left:-2px;">
+    <div class="footer-left">
+        <h3>Artsy <span> Gallery</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">About</a>
+            |
+            <a href="#">Contact</a>
+            |
+            <a href="#">Blog</a>
+            |
+        </p>
+
+        <p class="footer-company-name">2024<strong> Artsy Gallery</strong>
+            All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Kolkata</span>
+            India</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+91754987634</p>
+        </div>
+         <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#">xyz@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer company-about" style="color:#8f9296;font-weight:normal;">
+            <span style="color:#0a0a0a;font-weight:bold;">About the website</span><br><br>
+            <strong style="color:#0c0c0c;">Artsy Gallery</strong> is an art gallery management system where you can buy or sell paintings.
+            You can also get an opportunity to show your hidden talents.Thank You!
+        </p>
+        <div class="footer icons" style="margin-top: 50px;font-size: 27px;line-height: 38px;">
+            <a href="#"><i class="fab fa-facebook" style="color:#060505;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="padding-left:10px;color:#060505;"></i></a>
+            <a href="#"><i class="fab fa-linkedin" style="padding-left:10px;color:#060505;"></i></a>
+            <a href="#"><i class="fab fa-twitter" style="padding-left:10px;color:#060505;"></i></a>
+            <a href="#"><i class="fab fa-youtube" style="padding-left:10px;color:#060505;"></i></a>
+        </div>
+    </div>
+    </footer>
+
+    <!--footer section end-->
+
+<!-- loader section start -->
+<div class="loader-container">
+    <img src="images/loader3.gif"  alt="loader image"></img>
+</div>
+
+<!-- loader section end -->
+      
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom js file link-->
+     <script src="js/home2.js"></script>
+      <!--  <script src="js/login.js"></script> -->
+</body>
+</html>
