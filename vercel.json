@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/Landing_page.jsp" }
+    { "source": "/(.*)", "destination": "/landing_page.jsp" }
   ]
 }
